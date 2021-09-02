@@ -22,7 +22,7 @@ namespace IndianStateCensusAnalyzer
 
                 }
                 string[] column = data.Split(",");
-                if (csvFilePath.Contains("IndiaStateCode.csv"))
+                if (csvFilePath.Contains("IndianStateCode.csv"))
                     dataMap.Add(column[1], new CensusDTO(new POCO.StateCodeDAO(column[0], column[1], column[2], column[3])));
                 if (csvFilePath.Contains("IndianStateCensusData.csv"))
                     dataMap.Add(column[0], new CensusDTO(new POCO.CensusDataDAO(column[0], column[1], column[2], column[3])));
